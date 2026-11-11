@@ -57,3 +57,4 @@ npm run build
 - **Google Play Store Policy**: Fully compliant Data Safety disclosures and direct user account & data deletion portal at `/data-deletion`.
 - **Security Headers**: Configured with standard protection headers (`X-Content-Type-Options`, `X-Frame-Options`, `Referrer-Policy`, `Permissions-Policy`).
 - **Error Boundaries**: Custom branded recovery view implemented at `src/app/error.tsx`.
+
