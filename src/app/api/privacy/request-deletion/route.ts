@@ -58,6 +58,7 @@ export async function POST(request: Request) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(upstreamPayload),
+      signal: AbortSignal.timeout(15000),
     });
 
     const responseData = await upstreamRes.json().catch(() => ({}));

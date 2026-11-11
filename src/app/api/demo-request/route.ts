@@ -116,6 +116,7 @@ export async function POST(request: Request) {
       method: "POST",
       headers,
       body: JSON.stringify(upstreamPayload),
+      signal: AbortSignal.timeout(15000),
     });
 
     if (!upstreamResponse.ok) {
