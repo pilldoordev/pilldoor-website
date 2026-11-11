@@ -109,7 +109,7 @@ export function PharmacyDemoForm() {
         </div>
       )}
 
-      <form onSubmit={handleSubmit} className="space-y-4">
+      <form onSubmit={handleSubmit} className="space-y-4" suppressHydrationWarning>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
             <label htmlFor="pharmacyName" className="block text-xs font-bold text-[#0F172A] mb-1.5 uppercase tracking-wider">
@@ -123,6 +123,7 @@ export function PharmacyDemoForm() {
               value={formData.pharmacyName}
               onChange={handleChange}
               placeholder="e.g. Apollo Pharmacy Indiranagar"
+              suppressHydrationWarning
               className="w-full rounded-xl border border-[#CBD5E1] bg-[#F8FAFC] px-4 py-2.5 text-sm text-[#0F172A] placeholder-[#94A3B8] focus:border-[#10B981] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#10B981]/20 transition-all"
             />
           </div>
@@ -139,6 +140,7 @@ export function PharmacyDemoForm() {
               value={formData.contactPerson}
               onChange={handleChange}
               placeholder="e.g. Dr. Rajesh Sharma"
+              suppressHydrationWarning
               className="w-full rounded-xl border border-[#CBD5E1] bg-[#F8FAFC] px-4 py-2.5 text-sm text-[#0F172A] placeholder-[#94A3B8] focus:border-[#10B981] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#10B981]/20 transition-all"
             />
           </div>
@@ -157,6 +159,7 @@ export function PharmacyDemoForm() {
               value={formData.email}
               onChange={handleChange}
               placeholder="pharmacist@organization.com"
+              suppressHydrationWarning
               className="w-full rounded-xl border border-[#CBD5E1] bg-[#F8FAFC] px-4 py-2.5 text-sm text-[#0F172A] placeholder-[#94A3B8] focus:border-[#10B981] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#10B981]/20 transition-all"
             />
           </div>
@@ -173,6 +176,7 @@ export function PharmacyDemoForm() {
               value={formData.phone}
               onChange={handleChange}
               placeholder="+91 98765 43210"
+              suppressHydrationWarning
               className="w-full rounded-xl border border-[#CBD5E1] bg-[#F8FAFC] px-4 py-2.5 text-sm text-[#0F172A] placeholder-[#94A3B8] focus:border-[#10B981] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#10B981]/20 transition-all"
             />
           </div>
@@ -191,6 +195,7 @@ export function PharmacyDemoForm() {
               value={formData.city}
               onChange={handleChange}
               placeholder="e.g. Bengaluru, Karnataka"
+              suppressHydrationWarning
               className="w-full rounded-xl border border-[#CBD5E1] bg-[#F8FAFC] px-4 py-2.5 text-sm text-[#0F172A] placeholder-[#94A3B8] focus:border-[#10B981] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#10B981]/20 transition-all"
             />
           </div>
@@ -204,6 +209,7 @@ export function PharmacyDemoForm() {
               name="storeCount"
               value={formData.storeCount}
               onChange={handleChange}
+              suppressHydrationWarning
               className="w-full rounded-xl border border-[#CBD5E1] bg-[#F8FAFC] px-4 py-2.5 text-sm text-[#0F172A] focus:border-[#10B981] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#10B981]/20 transition-all"
             >
               <option value="1">1 Retail Pharmacy Outlet</option>
@@ -225,6 +231,7 @@ export function PharmacyDemoForm() {
             value={formData.message}
             onChange={handleChange}
             placeholder="Tell us about your current daily prescription volume and integration needs..."
+            suppressHydrationWarning
             className="w-full rounded-xl border border-[#CBD5E1] bg-[#F8FAFC] px-4 py-2.5 text-sm text-[#0F172A] placeholder-[#94A3B8] focus:border-[#10B981] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#10B981]/20 transition-all"
           />
         </div>
@@ -232,6 +239,7 @@ export function PharmacyDemoForm() {
         <button
           type="submit"
           disabled={isSubmitting}
+          suppressHydrationWarning
           className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[#0D4E3A] px-6 py-3.5 text-sm font-semibold text-white shadow-md hover:bg-[#157356] focus:outline-none focus:ring-2 focus:ring-[#10B981] focus:ring-offset-2 disabled:opacity-70 transition-all"
         >
           {isSubmitting ? (

@@ -28,6 +28,16 @@ const nextConfig: NextConfig = {
         destination: "/pharmacy-partners",
         permanent: true,
       },
+      {
+        source: "/delete-user-data",
+        destination: "/data-deletion",
+        permanent: true,
+      },
+      {
+        source: "/delete-account",
+        destination: "/data-deletion",
+        permanent: true,
+      },
     ];
   },
 };

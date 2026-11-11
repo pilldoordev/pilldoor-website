@@ -128,7 +128,7 @@ export function ContactForm() {
         </div>
       )}
 
-      <form onSubmit={handleSubmit} className="space-y-4">
+      <form onSubmit={handleSubmit} className="space-y-4" suppressHydrationWarning>
         {/* Category Selector */}
         <div>
           <label htmlFor="category" className="block text-xs font-bold text-[#0F172A] mb-1.5 uppercase tracking-wider">
@@ -139,6 +139,7 @@ export function ContactForm() {
             name="category"
             value={formData.category}
             onChange={handleChange}
+            suppressHydrationWarning
             className="w-full rounded-xl border border-[#CBD5E1] bg-[#F8FAFC] px-4 py-2.5 text-sm text-[#0F172A] focus:border-[#10B981] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#10B981]/20 transition-all cursor-pointer"
           >
             {CONTACT_CATEGORIES.map((cat) => (
@@ -163,6 +164,7 @@ export function ContactForm() {
               value={formData.name}
               onChange={handleChange}
               placeholder="e.g. Priya Sharma"
+              suppressHydrationWarning
               className="w-full rounded-xl border border-[#CBD5E1] bg-[#F8FAFC] px-4 py-2.5 text-sm text-[#0F172A] placeholder-[#94A3B8] focus:border-[#10B981] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#10B981]/20 transition-all"
             />
           </div>
@@ -179,6 +181,7 @@ export function ContactForm() {
               value={formData.email}
               onChange={handleChange}
               placeholder="priya@example.com"
+              suppressHydrationWarning
               className="w-full rounded-xl border border-[#CBD5E1] bg-[#F8FAFC] px-4 py-2.5 text-sm text-[#0F172A] placeholder-[#94A3B8] focus:border-[#10B981] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#10B981]/20 transition-all"
             />
           </div>
@@ -198,6 +201,7 @@ export function ContactForm() {
               value={formData.phone}
               onChange={handleChange}
               placeholder="+91 98765 43210"
+              suppressHydrationWarning
               className="w-full rounded-xl border border-[#CBD5E1] bg-[#F8FAFC] px-4 py-2.5 text-sm text-[#0F172A] placeholder-[#94A3B8] focus:border-[#10B981] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#10B981]/20 transition-all"
             />
           </div>
@@ -213,6 +217,7 @@ export function ContactForm() {
               value={formData.orderId}
               onChange={handleChange}
               placeholder="e.g. PLD-2026-0492"
+              suppressHydrationWarning
               className="w-full rounded-xl border border-[#CBD5E1] bg-[#F8FAFC] px-4 py-2.5 text-sm text-[#0F172A] placeholder-[#94A3B8] focus:border-[#10B981] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#10B981]/20 transition-all"
             />
           </div>
@@ -231,6 +236,7 @@ export function ContactForm() {
             value={formData.subject}
             onChange={handleChange}
             placeholder="Brief description of your question..."
+            suppressHydrationWarning
             className="w-full rounded-xl border border-[#CBD5E1] bg-[#F8FAFC] px-4 py-2.5 text-sm text-[#0F172A] placeholder-[#94A3B8] focus:border-[#10B981] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#10B981]/20 transition-all"
           />
         </div>
@@ -248,6 +254,7 @@ export function ContactForm() {
             value={formData.message}
             onChange={handleChange}
             placeholder="Please provide any relevant details so we can assist you..."
+            suppressHydrationWarning
             className="w-full rounded-xl border border-[#CBD5E1] bg-[#F8FAFC] px-4 py-2.5 text-sm text-[#0F172A] placeholder-[#94A3B8] focus:border-[#10B981] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#10B981]/20 transition-all"
           />
         </div>
@@ -255,6 +262,7 @@ export function ContactForm() {
         <button
           type="submit"
           disabled={isSubmitting}
+          suppressHydrationWarning
           className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[#0D4E3A] px-6 py-3.5 text-sm font-semibold text-white shadow-md hover:bg-[#157356] focus:outline-none focus:ring-2 focus:ring-[#10B981] focus:ring-offset-2 disabled:opacity-70 transition-all cursor-pointer"
         >
           {isSubmitting ? (
