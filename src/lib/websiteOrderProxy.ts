@@ -8,11 +8,13 @@ export interface ResolvedWebsiteOrderItem {
   unit_price: number;
 }
 
+const PRODUCTION_PHARMA_BACKEND_URL = "https://pharma.ezoro.in";
+
 export function getPharmaBackendBaseUrl(): string {
   const configured = (process.env.PHARMA_BACKEND_URL ?? "").trim().replace(/\/$/, "");
   if (configured) return configured;
   if (process.env.NODE_ENV === "development") return "http://localhost:8000";
-  return "";
+  return PRODUCTION_PHARMA_BACKEND_URL;
 }
 
 export function buildPharmaBackendHeaders(): Record<string, string> {
