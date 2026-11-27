@@ -4,6 +4,7 @@ import { TrustHighlightsSection } from "@/components/sections/TrustHighlightsSec
 import { CustomerHowItWorksSection } from "@/components/sections/CustomerHowItWorksSection";
 import { FamilyAppSection } from "@/components/sections/FamilyAppSection";
 import { PrescriptionEasierSection } from "@/components/sections/PrescriptionEasierSection";
+import { AdditionalMedicinesSection } from "@/components/sections/AdditionalMedicinesSection";
 import { OrderVisibilitySection } from "@/components/sections/OrderVisibilitySection";
 import { RepeatCareSection } from "@/components/sections/RepeatCareSection";
 import { CustomerAppShowcaseSection } from "@/components/sections/CustomerAppShowcaseSection";
@@ -26,6 +27,7 @@ export default function HomePage() {
       <CustomerHowItWorksSection />
       <FamilyAppSection />
       <PrescriptionEasierSection />
+      <AdditionalMedicinesSection />
       <OrderVisibilitySection />
       <RepeatCareSection />
       <CustomerAppShowcaseSection />
